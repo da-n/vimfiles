@@ -15,9 +15,9 @@ let mapleader = ","
 
 " Color scheme
 syntax enable
-colorscheme molokai
-let g:rehash256 = 1
-let g:molokai_original = 1
+colorscheme solarized
+"let g:rehash256 = 1
+"let g:molokai_original = 1
 set background=dark
 
 " Shortcut to rapidly toggle `set list`
@@ -78,3 +78,6 @@ set ttymouse=xterm2
 
 " VimSession
 :let g:session_autosave = 'no'
+
+" Set paste mode to insert
+set paste
