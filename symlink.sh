@@ -7,7 +7,7 @@
 ########## Variables
 
 DATE=$(date +"%Y%m%d%H%M%S")
-DIR=$HOME/vimfiles                    # dotfiles directory
+DIR=$HOME/.vimfiles                    # dotfiles directory
 DIR_BAK=$HOME/.vimfiles.bak             # old dotfiles backup directory
 FILES="vimrc vim"    # list of files/folders to symlink in homedir
 
