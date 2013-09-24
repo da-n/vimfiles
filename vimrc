@@ -15,7 +15,7 @@ let mapleader = ","
 
 " Color scheme
 syntax enable
-colorscheme solarized
+colorscheme molokai
 "let g:rehash256 = 1
 "let g:molokai_original = 1
 set background=dark
@@ -40,6 +40,7 @@ set expandtab
 set encoding=utf-8
 set scrolloff=3
 set autoindent
+set smartindent
 set cindent
 set showmode
 set showcmd
@@ -80,4 +81,4 @@ set writebackup
 :let g:session_autosave = 'no'
 
 " Set paste mode to insert
-set paste
+" set paste
