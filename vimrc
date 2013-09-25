@@ -79,6 +79,8 @@ set writebackup
 
 " VimSession
 :let g:session_autosave = 'no'
+:let g:session_directory = '~/.vim-sessions'
+
 
 " Set paste mode to insert
 " set paste
