@@ -1,5 +1,4 @@
 " Load Pathogen
-filetype off
 execute pathogen#infect()
 syntax on
 filetype plugin indent on
@@ -16,9 +15,9 @@ let mapleader = ","
 " Color scheme
 syntax enable
 colorscheme molokai
+set background=dark
 "let g:rehash256 = 1
 "let g:molokai_original = 1
-set background=dark
 
 " Shortcut to rapidly toggle `set list`
 nmap <leader>l :set list!<CR>
@@ -33,7 +32,6 @@ highlight SpecialKey guifg=#4a4a59
 " Indent settings
 set tabstop=2
 set shiftwidth=2
-" set softtabstop=2
 set expandtab
         
 " General settings
@@ -81,6 +79,11 @@ set writebackup
 :let g:session_autosave = 'no'
 :let g:session_directory = '~/.vim-sessions'
 
+" NERDTree
+" Map Ctrl+n to open NERDTree
+map <C-n> :NERDTreeToggle<CR>
+" Close vim if the only window left open is NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 " Set paste mode to insert
 " set paste
