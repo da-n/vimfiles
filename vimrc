@@ -16,8 +16,8 @@ let mapleader = ","
 syntax enable
 colorscheme molokai
 set background=dark
-"let g:rehash256 = 1
-"let g:molokai_original = 1
+let g:rehash256=1
+"let g:molokai_original=1
 
 " Shortcut to rapidly toggle `set list`
 nmap <leader>l :set list!<CR>
@@ -53,6 +53,7 @@ set backspace=indent,eol,start
 set laststatus=2
 set number
 set undofile
+set ttimeoutlen=50
 
 " Wrap at 80 chars
 " set wrap
@@ -85,5 +86,12 @@ map <C-n> :NERDTreeToggle<CR>
 " Close vim if the only window left open is NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
-" Set paste mode to insert
-" set paste
+" Disable Background Color Erase (BCE) so that color schemes
+" work properly when Vim is used inside tmux and GNU screen.
+" See also http://snk.tuxfamily.org/log/vim-256color-bce.html
+if &term =~ '256color'
+  set t_ut=
+endif
+
+" Powerline
+let g:airline_powerline_fonts=1
