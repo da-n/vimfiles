@@ -32,6 +32,7 @@ highlight SpecialKey guifg=#4a4a59
 " Indent settings
 set tabstop=2
 set shiftwidth=2
+set softtabstop=2
 set expandtab
         
 " General settings
@@ -95,3 +96,25 @@ endif
 
 " Powerline
 let g:airline_powerline_fonts=1
+
+" Strip trailing whitespace
+nnoremap <silent> <F5> :call <SID>StripTrailingWhitespaces()<CR>
+function! <SID>StripTrailingWhitespaces()
+  " Preparation: save last search, and cursor position.
+  let _s=@/
+  let l = line(".")
+  let c = col(".")
+  " Do the business:
+  %s/\s\+$//e
+  " Clean up: restore previous search history, and cursor position
+  let @/=_s
+  call cursor(l, c)
+endfunction
+
+" tab navigation like firefox
+nnoremap <C-S-h>       :tabprevious<CR>
+nnoremap <C-S-l>       :tabnext<CR>
+nnoremap <C-t>       :tabnew<CR>
+inoremap <C-S-h>  <Esc>:tabprevious<CR>i
+inoremap <C-S-l>  <Esc>:tabnext<CR>i
+inoremap <C-t>  <Esc>:tabnew<CR>
