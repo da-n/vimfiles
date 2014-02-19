@@ -96,6 +96,8 @@ endif
 
 " Powerline
 let g:airline_powerline_fonts=1
+set t_Co=256
+let g:Powerline_symbols = "fancy"
 
 " Strip trailing whitespace
 nnoremap <silent> <F5> :call <SID>StripTrailingWhitespaces()<CR>
