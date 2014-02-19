@@ -13,9 +13,14 @@ set modelines=0
 let mapleader = ","
 
 " Color scheme
+set t_Co=256
 syntax enable
-colorscheme molokai
 set background=dark
+let g:solarized_termcolors=256
+call togglebg#map("<F5>")
+
+"colorscheme molokai
+"set background=dark
 let g:rehash256=1
 "let g:molokai_original=1
 
@@ -96,7 +101,6 @@ endif
 
 " Powerline
 let g:airline_powerline_fonts=1
-set t_Co=256
 let g:Powerline_symbols = "fancy"
 
 " Strip trailing whitespace
