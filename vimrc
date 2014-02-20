@@ -20,9 +20,9 @@ let g:solarized_termcolors=256
 call togglebg#map("<F5>")
 
 "colorscheme molokai
-"set background=dark
+colorscheme solarized
 let g:rehash256=1
-"let g:molokai_original=1
+let g:molokai_original=1
 
 " Shortcut to rapidly toggle `set list`
 nmap <leader>l :set list!<CR>
@@ -102,6 +102,7 @@ endif
 " Powerline
 let g:airline_powerline_fonts=1
 let g:Powerline_symbols = "fancy"
+let g:airline#extensions#tabline#enabled = 1
 
 " Strip trailing whitespace
 nnoremap <silent> <F5> :call <SID>StripTrailingWhitespaces()<CR>
