@@ -76,11 +76,11 @@ set undodir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set writebackup
 
 " Enable mouse use in all modes
-" set mouse=a
+set mouse=a
 
 " Set this to the name of your terminal that supports mouse codes.
 " Must be one of: xterm, xterm2, netterm, dec, jsbterm, pterm
-" set ttymouse=xterm2
+set ttymouse=xterm2
 
 " VimSession
 :let g:session_autosave = 'no'
