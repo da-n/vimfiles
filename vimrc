@@ -13,16 +13,16 @@ set modelines=0
 let mapleader = ","
 
 " Color scheme
-set t_Co=256
+" set t_Co=256
 syntax enable
-set background=dark
-let g:solarized_termcolors=256
+" set background=dark
+" let g:solarized_termcolors=256
 call togglebg#map("<F5>")
 
-"colorscheme molokai
-colorscheme solarized
-let g:rehash256=1
-let g:molokai_original=1
+colorscheme noctu
+" colorscheme solarized
+" let g:rehash256=1
+" let g:molokai_original=1
 
 " Shortcut to rapidly toggle `set list`
 nmap <leader>l :set list!<CR>
@@ -39,7 +39,7 @@ set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 set expandtab
-        
+
 " General settings
 set encoding=utf-8
 set scrolloff=3
@@ -67,11 +67,11 @@ set ttimeoutlen=50
 " set formatoptions=qrn1
 " set colorcolumn=85
 
-" backup to ~/.vim-tmp 
-set backup 
-set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp 
-set backupskip=/tmp/*,/private/tmp/* 
-set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp 
+" backup to ~/.vim-tmp
+set backup
+set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set backupskip=/tmp/*,/private/tmp/*
+set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set undodir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set writebackup
 
